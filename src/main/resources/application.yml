@@ -6,11 +6,14 @@ app:
   # cacheDir: C:\\opt\\data\\${app.id}\\config-cache
 
 apollo:
+  cacheDir: /tmp/apollo-cache/
   bootstrap:
     enabled: true
     namespaces: application,TEST1.redis
+    # 在日志之前 使用
+    eagerLoad:
+      enabled: true
 # ---- 环境
 # 对于Mac/Linux，文件位置为/opt/settings/server.properties
 # 对于Windows，文件位置为C:\opt\settings\server.properties
 # env=DEV
-
